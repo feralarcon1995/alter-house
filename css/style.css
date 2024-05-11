@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fira Sans", sans-serif;
+}
+
+p,
+a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  background-color: #050437;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+nav .nav-brand, nav .nav-link {
+  transition: 0.4s;
+  color: #fff;
+}
+nav .nav-brand:hover, nav .nav-link:hover {
+  color: #00a8ff;
+}
+nav .nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.7803921569), rgba(0, 0, 0, 0.7176470588)), url("../images/hero.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.hero .hero-content {
+  color: #fff;
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.hero .hero-content h1 {
+  font-size: 5rem;
+}
+.hero .hero-content p {
+  font-size: 1.3rem;
+  color: #eee;
+}
+.hero .hero-content a {
+  color: #00a8ff;
+  border: 1px solid #00a8ff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 3rem;
+  width: 150px;
+  background-color: #050437;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+.hero .hero-content a:hover {
+  background: linear-gradient(to right, #fff, #00a8ff);
+  color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.gallery {
+  padding: 20px;
+}
+.gallery .gallery-title {
+  text-align: center;
+  padding: 40px 0;
+}
+.gallery .gallery-title h2 {
+  color: #fff;
+  font-size: 2.3rem;
+  padding: 10px 0;
+}
+.gallery .gallery-title p {
+  color: #eee;
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+.gallery-container .gallery-item {
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.gallery-container .gallery-item:hover .gallery-text {
+  transform: scale(1);
+}
+.gallery-container .gallery-item .gallery-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7176470588);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+.gallery-container .gallery-item .gallery-text span {
+  display: block;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  border-top: 2px solid #fff;
+  padding: 0 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: 0.5s;
+}
+
+@media (max-width: 480px) {
+  nav,
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero {
+    height: 900px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

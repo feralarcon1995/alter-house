@@ -1,0 +1,11 @@
+@media (max-width: 480px) {
+  nav,
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    height: 900px;
+  }
+}

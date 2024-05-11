@@ -1,0 +1,105 @@
+.hero {
+  background: linear-gradient(45deg, #000000c7, #000000b7), url("../images/hero.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  max-height: 100%;
+  @include flex(column, center, center, 10px);
+
+  .hero-content {
+    color: $light-color;
+    width: 70%;
+    text-align: center;
+    @include flex(column, center, center, 10px);
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: $gray-color;
+    }
+
+    a {
+      color: $second-color;
+      border: 1px solid $second-color;
+      padding: 15px;
+      text-align: center;
+      border-radius: 3rem;
+      width: 150px;
+      background-color: $main-color;
+      font-size: 1.2rem;
+      transition: 0.5s;
+      &:hover {
+        background: linear-gradient(to right, $light-color, $second-color);
+        color: transparent;
+        background-clip: text;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.gallery {
+  padding: 20px;
+
+  .gallery-title{
+    text-align: center;
+    padding: 40px 0;
+    h2 {
+      color: $light-color;
+      font-size: 2.3rem;
+      padding: 10px 0;
+    }
+
+    p{
+      color: $gray-color;
+    }
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      transition: 0.5s;
+
+      &:hover {
+        .gallery-text {
+          transform: scale(1);
+        }
+      }
+
+      .gallery-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #000000b7;
+        @include flex(column, flex-start, center, 10px);
+        color: $light-color;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: 0.5s;
+
+        span {
+          display: block;
+          font-family: $main-font;
+          font-weight: bold;
+          font-size: 3rem;
+          border-top: 2px solid $light-color;
+          padding: 0 10px;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
